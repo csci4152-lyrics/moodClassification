@@ -19,18 +19,9 @@ while (<STDIN>) {
 open(my $fh, ">", $profileName) or die "Couldn't open ", $profileName;
 
 # Add the results for each n-gram size to a string
-for($i = 0; $i < $windowSize; $i++) {
-  $ng = Text::Ngrams->new( windowsize => $i+1, type => byte );
-  $ng->process_text($input);
-  $outText .= $ng->to_string( orderby => 'frequency', onlyfirst => $onlyFirst, normalize => 1, spartan => 1);
-
-  # Print a new line in between n-gram results of different size
-  # Except for the final n-gram size
-  if($i != $windowSize-1) { 
-    $outText .= "\n";
-  }
-  $ng = "";
-}
+$ng = Text::Ngrams->new( windowsize => $windowSize, type => byte );
+$ng->process_text($input);
+$outText .= $ng->to_string( orderby => 'frequency', onlyfirst => $onlyFirst, normalize => 1, spartan => 1);
 
 # Print text in string to profile_name
 print $fh $outText;
