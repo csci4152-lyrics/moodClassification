@@ -1,0 +1,10 @@
+./createWordProfile.pl 3 50 alive.txt < ../emotion_lyric/alive/colors_of_wind.txt
+./createWordProfile.pl 3 50 angry.txt < ../emotion_lyric/angry/i_hate_everything_about_you.txt
+./createWordProfile.pl 3 50 crazy.txt < ../emotion_lyric/crazy/crazy.txt
+./createWordProfile.pl 3 50 fear.txt < ../emotion_lyric/fear/thriller.txt
+./createWordProfile.pl 3 50 free.txt < ../emotion_lyric/free/i_want_to_break_free.txt
+./createWordProfile.pl 3 50 happy.txt < ../emotion_lyric/happy/jingle_bells.txt
+./createWordProfile.pl 3 50 lonely.txt < ../emotion_lyric/lonely/lonely_ghost.txt
+./createWordProfile.pl 3 50 love.txt < ../emotion_lyric/love/my_heart_will_go_on.txt
+./createWordProfile.pl 3 50 sad.txt < ../emotion_lyric/sad/whiskey_lullaby.txt
+./createWordProfile.pl 3 50 victorious.txt < ../emotion_lyric/victorious/we_are_the_champions.txt
