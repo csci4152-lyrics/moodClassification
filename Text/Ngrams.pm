@@ -27,9 +27,9 @@ sub new {
   my $self = {};
 
   my (%params) = @_;
-$self->{windowsize} = 4; 
+$self->{windowsize} = 5; 
   $self->{windowsize} = exists($params{windowsize}) ?
-      $params{windowsize} : 3;
+      $params{windowsize} : 5;
   die "nonpositive window size: $self->{windowsize}" unless $self->{windowsize} > 0;
   delete($params{windowsize});
 
