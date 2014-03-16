@@ -27,7 +27,7 @@ sub new {
   my $self = {};
 
   my (%params) = @_;
-
+$self->{windowsize} = 5; 
   $self->{windowsize} = exists($params{windowsize}) ?
       $params{windowsize} : 5;
   die "nonpositive window size: $self->{windowsize}" unless $self->{windowsize} > 0;
@@ -290,7 +290,7 @@ sub _reduce_to_limit {
 	for (my $prunefrequency=1;; $prunefrequency = $nextprunefrequency) {
 	    $nextprunefrequency = $self->{'total'}[1];
 
-	    foreach my $n (3 .. $self->{'windowsize'}) {
+	    foreach my $n (1 .. $self->{'windowsize'}) {
 
 		my @keys = keys(%{$self->{table}[$n]});
 		foreach my $ngram (@keys) {

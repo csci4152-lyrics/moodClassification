@@ -19,7 +19,7 @@ while (<STDIN>) {
 open(my $fh, ">", $profileName) or die "Couldn't open ", $profileName;
 
 # Add the results for each n-gram size to a string
-$ng = Text::Ngrams->new( windowsize => $windowSize, type => byte );
+$ng = Text::Ngrams->new( windowsize => $windowSize, type => word );
 $ng->process_text($input);
 $outText .= $ng->to_string( orderby => 'frequency', onlyfirst => $onlyFirst, normalize => 1, spartan => 1);
 
